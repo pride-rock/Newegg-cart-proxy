@@ -5,6 +5,7 @@ const app = express();
 const port = 8080;
 const axios = require('axios');
 const parser = require('body-parser');
+const url = require('./config');
 
 app.use(parser.json());
 
@@ -16,7 +17,7 @@ app.get('*', (req, res) => {
 })
 
 app.get('/:id', (req, res) => {
-  axios.get(`http://ec2-18-220-76-0.us-east-2.compute.amazonaws.com/api/items/${req.params.id}`)
+  axios.get(`${url}/api/items/${req.params.id}`)
   .then((data) => {
     res.send(data);
   })
