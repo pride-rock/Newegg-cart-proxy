@@ -1,1 +1,1 @@
-module.exports = 'http://ec2-3-17-205-65.us-east-2.compute.amazonaws.com'
+module.exports = 'ec2-3-17-205-65.us-east-2.compute.amazonaws.com'
